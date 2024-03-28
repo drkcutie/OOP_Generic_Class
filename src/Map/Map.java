@@ -1,18 +1,19 @@
 package Map;
 
 import java.util.ArrayList;
+import java.util.InputMismatchException;
 
-public class Map {
+public class Map <K, V> {
 
-    ArrayList<Object> keyArray;
-    ArrayList<Object> valueArray;
+    ArrayList <K> keyArray;
+    ArrayList <V> valueArray;
 
     public Map() {
         keyArray = new ArrayList<>();
         valueArray = new ArrayList<>();
     }
 
-    public void put(Object key, Object value)
+    public void put( K key, V value) throws InputMismatchException
     {
         if(keyArray.contains(key))
         {
@@ -26,7 +27,7 @@ public class Map {
         }
         System.out.println("Inserted [ " + key + " , " + value+" ]\n");
     }
-    public Object get(Object key)
+    public V get(K key) throws InputMismatchException
     {
         int index = keyArray.indexOf(key);
         if(index != -1)
@@ -36,7 +37,7 @@ public class Map {
             return null;
 
     }
-    public Object remove(Object key)
+    public V remove(K key) throws InputMismatchException
     {
         int index = keyArray.indexOf(key);
         if(index != -1)
