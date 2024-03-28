@@ -9,7 +9,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
         Map map = new Map();
 
-        char task = ' ';
+        char task;
         Object obj;
         do {
             System.out.print("Enter operation (p - put, g - get, r - remove , s - size): ");

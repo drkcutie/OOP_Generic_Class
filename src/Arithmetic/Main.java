@@ -6,7 +6,7 @@ public class Main{
 
 
     public static void main(String[] args) {
-        char op1 = ' ', op2 = ' ';
+        char op1, op2;
         Number num1 , num2;
 
 
@@ -46,7 +46,7 @@ public class Main{
 
 
         Arithmetic arithmetic = new Arithmetic(num1, num2);
-        char tasks = ' ';
+        char tasks;
         do {
             System.out.print("Enter operation(A - Add, M - Multiply , D- Divide, S - Subtract, g - getMin G- getMax): ");
             tasks = sc.next().charAt(0);

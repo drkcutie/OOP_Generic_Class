@@ -22,29 +22,28 @@ public class Map {
         else
         {
             keyArray.add(key);
-            valueArray.add(key);
+            valueArray.add(value);
         }
         System.out.println("Inserted [ " + key + " , " + value+" ]\n");
     }
-    public Object get(Object key) throws NullPointerException
+    public Object get(Object key)
     {
-        try {
-            return valueArray.get(keyArray.indexOf(key));
-        }catch (Exception e)
+        int index = keyArray.indexOf(key);
+        if(index != -1)
         {
-            return null;
+            return valueArray.get(index);
         }
+            return null;
 
     }
-    public Object remove(Object key) throws NullPointerException
+    public Object remove(Object key)
     {
-        if(!keyArray.contains(key))
+        int index = keyArray.indexOf(key);
+        if(index != -1)
         {
-            return null;
+            keyArray.remove(index);
+            return valueArray.remove(index);
         }
-        Object temp = get(key);
-        valueArray.remove(keyArray.indexOf(key));
-        keyArray.remove(key);
-        return key;
+        return null;
     }
 }

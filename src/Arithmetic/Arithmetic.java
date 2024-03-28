@@ -1,11 +1,9 @@
 package Arithmetic;
 
-import java.awt.font.NumericShaper;
-
 public class Arithmetic {
 
-    private Number num1;
-    private Number num2;
+    private final Number num1;
+    private final Number num2;
 
 
     Arithmetic(Number num1, Number num2) {
